@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Cliente</title>
+</head>
+<body>
+<form method="POST">
+   <h1>Agregar Persona</h1>
+    <table>
+    {{ formCliente }}
+    </table>
+    <button type="submit">Guardar</button>
+    {% csrf_token %}
+</form>
+</body>
+</html>

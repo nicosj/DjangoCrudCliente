@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Cliente</title>
+</head>
+<body>
+<h1>Detalle Cliente</h1>
+<div>Id Cliente: {{ cliente.id }}</div>
+<div>Nombre: {{ cliente.nombre }}</div>
+<div>Apellido: {{ cliente.apellidos }}</div>
+<div>Email: {{ cliente.email }}</div>
+<a href="{% url 'index' %}">volver</a>
+</body>
+</html>

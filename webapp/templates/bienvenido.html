@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido Django</title>
+</head>
+<body>
+<h1>Carteras de clientes</h1>
+<div>
+    Numeros de Personas: {{ no_personas }}
+
+</div>
+<div>
+    <a href="nuevoCliente"> Agregar persona</a>
+</div>
+<div>
+
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>email</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for clx in client %}
+            <tr>
+                <td>{{ clx.id }} </td>
+                <td>{{ clx.nombre }}</td>
+                <td>{{ clx.email }}</td>
+                <td><a href='detalleCliente/{{ clx.id }}'> ver </a></td>
+                <td><a href='nuevoCliente/{{ clx.id }}'> editar</a></td>
+                <td><a href='eliminarCliente/{{ clx.id }}'> eliminar</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
